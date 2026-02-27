@@ -1,0 +1,174 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5yq6xh412ilm"]
+
+[ext_resource type="Script" uid="uid://cqfmftweedlvb" path="res://addons/dialogic/Modules/History/settings_history.gd" id="1_hbhst"]
+[ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="2_wefye"]
+
+[sub_resource type="Image" id="Image_cvlu0"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_irr0a"]
+image = SubResource("Image_cvlu0")
+
+[node name="History" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"DialogicPanelA"
+script = ExtResource("1_hbhst")
+
+[node name="HistoryOptions" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title3" type="Label" parent="HistoryOptions"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "简易历史"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HistoryOptions"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HistoryOptions/HBoxContainer"]
+layout_mode = 2
+text = "开启收集"
+
+[node name="HintTooltip" parent="HistoryOptions/HBoxContainer" instance=ExtResource("2_wefye")]
+layout_mode = 2
+tooltip_text = "启用后，一些事件（如文本、加入、离开、选择）将会存储一条日志。
+此外，默认布局将具备日志面板选项。"
+texture = SubResource("ImageTexture_irr0a")
+hint_text = "启用后，一些事件（如文本、加入、离开、选择）将会存储一条日志。
+此外，默认布局将具备日志面板选项。"
+
+[node name="SimpleHistoryEnabled" type="CheckBox" parent="HistoryOptions/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HistoryOptions"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HistoryOptions/HBoxContainer2"]
+layout_mode = 2
+text = "存储到存档并重载"
+
+[node name="HintTooltip" parent="HistoryOptions/HBoxContainer2" instance=ExtResource("2_wefye")]
+layout_mode = 2
+tooltip_text = "启用后，简易历史记录将包含在存档中。"
+texture = SubResource("ImageTexture_irr0a")
+hint_text = "启用后，简易历史记录将包含在存档中。此外，它将在 Dialogic.clear(FULL_CLEAR) 上重置。"
+
+[node name="SimpleHistorySave" type="CheckBox" parent="HistoryOptions/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HistoryOptions"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "完整历史"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HistoryOptions"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HistoryOptions/HBoxContainer5"]
+layout_mode = 2
+text = "启用全局追溯"
+
+[node name="HintTooltip" parent="HistoryOptions/HBoxContainer5" instance=ExtResource("2_wefye")]
+layout_mode = 2
+tooltip_text = "启用后，将存储每个事件的副本。"
+texture = SubResource("ImageTexture_irr0a")
+hint_text = "启用后，将存储每个事件的副本。"
+
+[node name="FullHistoryEnabled" type="CheckBox" parent="HistoryOptions/HBoxContainer5"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="HistoryOptions"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HistoryOptions/HBoxContainer6"]
+layout_mode = 2
+text = "存储到存档并重载"
+
+[node name="HintTooltip" parent="HistoryOptions/HBoxContainer6" instance=ExtResource("2_wefye")]
+layout_mode = 2
+tooltip_text = "启用后，完整历史记录将包含在游戏存档中。"
+texture = SubResource("ImageTexture_irr0a")
+hint_text = "启用后，完整历史记录将包含在游戏存档中。此外，它将在 Dialogic.clear(FULL_CLEAR) 上被重置。"
+
+[node name="FullHistorySave" type="CheckBox" parent="HistoryOptions/HBoxContainer6"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Title2" type="Label" parent="HistoryOptions"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "已阅事件历史"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HistoryOptions"]
+layout_mode = 2
+
+[node name="EnabledLabel" type="Label" parent="HistoryOptions/HBoxContainer4"]
+layout_mode = 2
+text = "开启记忆功能"
+
+[node name="HintTooltip" parent="HistoryOptions/HBoxContainer4" instance=ExtResource("2_wefye")]
+layout_mode = 2
+tooltip_text = "记住时间轴中是否已经遇到过该事件。
+启用时会发出“Dialogic.History.visited_event”和“Dialogic.History.unvisited_event”信号。"
+texture = SubResource("ImageTexture_irr0a")
+hint_text = "记住时间轴中是否已经遇到过该事件。
+启用时会发出“Dialogic.History.visited_event”和“Dialogic.History.unvisited_event”信号。"
+
+[node name="AlreadyReadHistoryEnabled" type="CheckBox" parent="HistoryOptions/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainerSaveOnAutoSave" type="HBoxContainer" parent="HistoryOptions"]
+layout_mode = 2
+
+[node name="EnabledLabel" type="Label" parent="HistoryOptions/HBoxContainerSaveOnAutoSave"]
+layout_mode = 2
+text = "在自动保存信号上保存"
+
+[node name="HintTooltip" parent="HistoryOptions/HBoxContainerSaveOnAutoSave" instance=ExtResource("2_wefye")]
+layout_mode = 2
+tooltip_text = "发生自动保存时，将已访问的历史记录存储在全局保存文件中。
+自动保存是存档设置的一部分。"
+texture = SubResource("ImageTexture_irr0a")
+hint_text = "发生自动保存时，将已访问的历史记录存储在全局保存文件中。
+自动保存是存档设置的一部分。"
+
+[node name="SaveOnAutoSaveToggle" type="CheckBox" parent="HistoryOptions/HBoxContainerSaveOnAutoSave"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainerSaveOnSave" type="HBoxContainer" parent="HistoryOptions"]
+layout_mode = 2
+
+[node name="EnabledLabel" type="Label" parent="HistoryOptions/HBoxContainerSaveOnSave"]
+layout_mode = 2
+text = "在保存信号上保存"
+
+[node name="HintTooltip" parent="HistoryOptions/HBoxContainerSaveOnSave" instance=ExtResource("2_wefye")]
+layout_mode = 2
+tooltip_text = "发生正常保存时，将已访问的历史记录存储在全局保存文件中。
+这可以通过 Dialogic.Save.save 方法完成。
+此设置会忽略自动保存。"
+texture = SubResource("ImageTexture_irr0a")
+hint_text = "发生正常保存时，将已访问的历史记录存储在全局保存文件中。
+这可以通过 Dialogic.Save.save 方法完成。
+此设置会忽略自动保存。"
+
+[node name="SaveOnSaveToggle" type="CheckBox" parent="HistoryOptions/HBoxContainerSaveOnSave"]
+unique_name_in_owner = true
+layout_mode = 2

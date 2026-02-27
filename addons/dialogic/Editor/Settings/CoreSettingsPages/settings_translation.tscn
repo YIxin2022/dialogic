@@ -1,0 +1,357 @@
+[gd_scene load_steps=7 format=3 uid="uid://chpb1mj03xjxv"]
+
+[ext_resource type="Script" uid="uid://b0bm772xo8n2j" path="res://addons/dialogic/Editor/Settings/CoreSettingsPages/settings_translation.gd" id="1_dvmyi"]
+[ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="2_k2lou"]
+[ext_resource type="PackedScene" uid="uid://dpwhshre1n4t6" path="res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.tscn" id="3_dq4j2"]
+[ext_resource type="PackedScene" uid="uid://7mvxuaulctcq" path="res://addons/dialogic/Editor/Events/Fields/field_file.tscn" id="4_kvsma"]
+
+[sub_resource type="Image" id="Image_4jaem"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_xbph7"]
+image = SubResource("Image_4jaem")
+
+[node name="Translations" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -101.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dvmyi")
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Basics" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="HBox/Basics"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "基本参数"
+
+[node name="VBox4" type="HBoxContainer" parent="HBox/Basics"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBox/Basics/VBox4"]
+layout_mode = 2
+text = "启用翻译"
+
+[node name="TransEnabled" type="CheckBox" parent="HBox/Basics/VBox4"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HSeparator5" type="VSeparator" parent="HBox"]
+layout_mode = 2
+
+[node name="Testing" type="VBoxContainer" parent="HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title2" type="Label" parent="HBox/Testing"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "测试"
+
+[node name="VBox3" type="HBoxContainer" parent="HBox/Testing"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="HBox/Testing/VBox3"]
+layout_mode = 2
+text = "测试语言环境"
+
+[node name="HintTooltip8" parent="HBox/Testing/VBox3" instance=ExtResource("2_k2lou")]
+layout_mode = 2
+tooltip_text = "更改此语言环境即可在不同的语言下测试你的游戏（仅限编辑器内使用）。
+等同于修改测试语言的项目配置。"
+texture = SubResource("ImageTexture_xbph7")
+hint_text = "更改此语言环境即可在不同的语言下测试你的游戏（仅限编辑器内使用）。
+等同于修改测试语言的项目配置。
+
+通过“收集翻译”可更新此处的下拉列表。"
+
+[node name="TestingLocale" parent="HBox/Testing/VBox3" instance=ExtResource("3_dq4j2")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="TranslationSettings" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TranslationSettings"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SettingsTitle" type="Label" parent="TranslationSettings/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "设置"
+
+[node name="Grid" type="GridContainer" parent="TranslationSettings/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="VBox" type="HBoxContainer" parent="TranslationSettings/VBoxContainer/Grid"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="TranslationSettings/VBoxContainer/Grid/VBox"]
+layout_mode = 2
+text = "默认语种环境"
+
+[node name="HintTooltip" parent="TranslationSettings/VBoxContainer/Grid/VBox" instance=ExtResource("2_k2lou")]
+layout_mode = 2
+tooltip_text = "您的时间轴默认采用的语种局域环境代码。"
+texture = SubResource("ImageTexture_xbph7")
+hint_text = "您的时间轴默认采用的语种局域环境代码。"
+
+[node name="OrigLocale" parent="TranslationSettings/VBoxContainer/Grid" instance=ExtResource("3_dq4j2")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TransFile" type="HBoxContainer" parent="TranslationSettings/VBoxContainer/Grid"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TranslationSettings/VBoxContainer/Grid/TransFile"]
+layout_mode = 2
+text = "目标翻译目录"
+
+[node name="HintTooltip3" parent="TranslationSettings/VBoxContainer/Grid/TransFile" instance=ExtResource("2_k2lou")]
+layout_mode = 2
+tooltip_text = "请选择一个文件夹以供 Dialogic 保存 CSV 文件。
+当我们指定导出位置为“项目内的翻译目录”时便使用它。"
+texture = SubResource("ImageTexture_xbph7")
+hint_text = "请选择一个文件夹以供 Dialogic 保存 CSV 文件。
+当我们指定导出位置为“项目内的翻译目录”时便使用它。"
+
+[node name="TransFolderPicker" parent="TranslationSettings/VBoxContainer/Grid" instance=ExtResource("4_kvsma")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+file_mode = 2
+
+[node name="VBox2" type="HBoxContainer" parent="TranslationSettings/VBoxContainer/Grid"]
+layout_mode = 2
+
+[node name="OutputModeLabel" type="Label" parent="TranslationSettings/VBoxContainer/Grid/VBox2"]
+layout_mode = 2
+text = "文件输出模式"
+
+[node name="OutputModeTooltip" parent="TranslationSettings/VBoxContainer/Grid/VBox2" instance=ExtResource("2_k2lou")]
+layout_mode = 2
+tooltip_text = "在此控制系统输出合并后的 CSV 数量方式。
+
+• “以文件类型为组”： 每类文件各自只生成一个单一的CSV，例如时间轴们合1个、角色们又合1个等等。
+
+• “单独拆分文件”： 每一个内部文档都映射生成一个翻译CSV文件。
+
+其中上述的“单独拆分文件”选项将会受到“输出落地处”配置的影响。而无论怎样，“类型组合模式”总会输出到那个预设的总翻译目录。"
+texture = SubResource("ImageTexture_xbph7")
+hint_text = "在此控制系统输出合并后的 CSV 数量方式。
+
+• “以文件类型为组”： 每类文件各自只生成一个单一的CSV，例如时间轴们合1个、角色们又合1个等等。
+
+• “单独拆分文件”： 每一个内部文档都映射生成一个翻译CSV文件。
+
+其中上述的“单独拆分文件”选项将会受到“输出落地处”配置的影响。而无论怎样，“类型组合模式”总会输出到那个预设的总翻译目录。"
+
+[node name="TransMode" type="OptionButton" parent="TranslationSettings/VBoxContainer/Grid"]
+unique_name_in_owner = true
+layout_mode = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "每个类型"
+popup/item_0/id = 0
+popup/item_1/text = "每个文件"
+popup/item_1/id = 1
+
+[node name="OutputLocation" type="HBoxContainer" parent="TranslationSettings/VBoxContainer/Grid"]
+layout_mode = 2
+
+[node name="OutputLocationLabel" type="Label" parent="TranslationSettings/VBoxContainer/Grid/OutputLocation"]
+layout_mode = 2
+text = "输出位置存放处"
+
+[node name="OutputLocationTooltip" parent="TranslationSettings/VBoxContainer/Grid/OutputLocation" instance=ExtResource("2_k2lou")]
+layout_mode = 2
+tooltip_text = "决定要把所生成的 CSV 放到项目的什么地方。
+
+• \"翻译文件夹内\"： 全部堆进上文配置的总目。
+
+• \"与时间轴同级\"： 和源文件待在相同的层级下。
+
+这项功能只有选择了 “单独拆分文件” 才会起效哦！"
+texture = SubResource("ImageTexture_xbph7")
+hint_text = "决定要把所生成的 CSV 放到项目的什么地方。
+
+• \"翻译文件夹内\"： 全部堆进上文配置的总目。
+
+• \"与时间轴同级\"： 和源文件待在相同的层级下。
+
+这项功能只有选择了 “单独拆分文件” 才会起效哦！"
+
+[node name="SaveLocationMode" type="OptionButton" parent="TranslationSettings/VBoxContainer/Grid"]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+item_count = 2
+selected = 0
+popup/item_0/text = "在翻译文件夹内"
+popup/item_0/id = 0
+popup/item_1/text = "紧临原文件"
+popup/item_1/id = 1
+
+[node name="Control" type="Control" parent="TranslationSettings/VBoxContainer/Grid"]
+visible = false
+layout_mode = 2
+
+[node name="AddSeparatorHBox" type="HBoxContainer" parent="TranslationSettings/VBoxContainer/Grid"]
+layout_mode = 2
+
+[node name="AddSeparatorLabel" type="Label" parent="TranslationSettings/VBoxContainer/Grid/AddSeparatorHBox"]
+layout_mode = 2
+text = "插入分隔间距"
+
+[node name="HintAddSeparatorEnabled" parent="TranslationSettings/VBoxContainer/Grid/AddSeparatorHBox" instance=ExtResource("2_k2lou")]
+layout_mode = 2
+tooltip_text = "这会在单体项目的混合型 CSV 格式文件内部加上换行缝隙。
+
+举个例子：新碰到个术语或者重起时间轴时，打出一行空白便于查阅区分。"
+texture = SubResource("ImageTexture_xbph7")
+hint_text = "这会在单体项目的混合型 CSV 格式文件内部加上换行缝隙。
+
+举个例子：新碰到个术语或者重起时间轴时，打出一行空白便于查阅区分。"
+
+[node name="AddSeparatorEnabled" type="CheckBox" parent="TranslationSettings/VBoxContainer/Grid"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HSeparator6" type="VSeparator" parent="TranslationSettings"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TranslationSettings"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TranslationSettings/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Title3" type="Label" parent="TranslationSettings/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "翻译相关动作行为"
+
+[node name="Actions" type="GridContainer" parent="TranslationSettings/VBoxContainer2"]
+layout_mode = 2
+columns = 2
+
+[node name="UpdateCsvFiles" type="Button" parent="TranslationSettings/VBoxContainer2/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "刷新导出并更新 CSV 文件"
+icon = SubResource("ImageTexture_xbph7")
+
+[node name="HintTooltip5" parent="TranslationSettings/VBoxContainer2/Actions" instance=ExtResource("2_k2lou")]
+layout_mode = 2
+tooltip_text = "点击后系统会开始搜查脚本并尝试重新覆盖它们的翻译版本 CSV 表。
+
+注意：带有前缀 \"dialogic_\" 的名字均为官方内置结构名。
+
+如果您事先没设好合理的 “全局翻译工作根目录” ，这功能将拒绝您点击。"
+texture = SubResource("ImageTexture_xbph7")
+hint_text = "点击后系统会开始搜查脚本并尝试重新覆盖它们的翻译版本 CSV 表。
+
+注意：带有前缀 \"dialogic_\" 的名字均为官方内置结构名。
+
+如果您事先没设好合理的 “全局翻译工作根目录” ，这功能将拒绝您点击。"
+
+[node name="CollectTranslations" type="Button" parent="TranslationSettings/VBoxContainer2/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "收集检测系统翻译"
+icon = SubResource("ImageTexture_xbph7")
+
+[node name="HintTooltip6" parent="TranslationSettings/VBoxContainer2/Actions" instance=ExtResource("2_k2lou")]
+layout_mode = 2
+tooltip_text = "原生 Godot 会自动把那些外部导入的 CSV 当成真正的 .translation 本地化文件。
+按下这里就可以快捷地将它们登记到 “引擎顶端项目栏 -> 国际化本地控制” 里面！"
+texture = SubResource("ImageTexture_xbph7")
+hint_text = "原生 Godot 会自动把那些外部导入的 CSV 当成真正的 .translation 本地化文件。
+按下这里就可以快捷地将它们登记到 “引擎顶端项目栏 -> 国际化本地控制” 里面！"
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="TranslationSettings/VBoxContainer2/Actions"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="TranslationSettings/VBoxContainer2/Actions"]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 2
+
+[node name="TransRemove" type="Button" parent="TranslationSettings/VBoxContainer2/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "彻底毁坏并移除所有有关翻译内容"
+icon = SubResource("ImageTexture_xbph7")
+
+[node name="HintTooltip7" parent="TranslationSettings/VBoxContainer2/Actions" instance=ExtResource("2_k2lou")]
+layout_mode = 2
+tooltip_text = "注意：点这个毁灭按钮前最好冷静些！
+
+系统会自动去查找任何具有 \"dialogic_\" 并看起来疑似 .csv 甚至本地生成的 .translation 进行根除...
+
+甚至连脚本里的诸如 (#id:333) 此类的事件绑定都会在代码行被刮擦干净。"
+texture = SubResource("ImageTexture_xbph7")
+hint_text = "注意：点这个毁灭按钮前最好冷静些！
+
+系统会自动去查找任何具有 \"dialogic_\" 并看起来疑似 .csv 甚至本地生成的 .translation 进行根除...
+
+甚至连脚本里的诸如 (#id:333) 此类的事件绑定都会在代码行被刮擦干净。"
+
+[node name="StatusMessage" type="Label" parent="TranslationSettings/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "⛔ 本地化角色字段或生成项目的CSV 需要指定一个具备完全存取权限的高阶文件夹才能起效。"
+autowrap_mode = 3
+
+[node name="UpdateConfirmationDialog" type="ConfirmationDialog" parent="."]
+unique_name_in_owner = true
+title = "请执行决定！"
+size = Vector2i(490, 200)
+ok_button_text = "粉碎旧的直接生成出新的版本！"
+dialog_text = "由于您频繁更改配置导致文件结构有变！
+
+目前系统已经检测到一些冲突了...如果您已经确定之前的文档无效了，大可放心去替换掉那些陈旧的数据并开始新轮回。"
+dialog_autowrap = true
+
+[node name="EraseConfirmationDialog" type="ConfirmationDialog" parent="."]
+unique_name_in_owner = true
+position = Vector2i(0, 36)
+size = Vector2i(500, 280)
+min_size = Vector2i(300, 70)
+ok_button_text = "直接全面销毁！"
+dialog_text = "您准备干这种勾当了：
+-   强制干掉全部拥有 \"dialogic_\" 前缀后缀的 CSV 等档案群。
+-   删除由 CSV 遗留下来的导入遗址。
+-   剔除一切 .translation 项目配置依赖。
+-   让事件轴里面的翻译记录和映射关系断裂抹消。
+-   清洗 \"_translation_keys\" 甚至是 \"Glossary\" 内联结构的数据内容。"
+dialog_autowrap = true
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 2
+
+[connection signal="confirmed" from="UpdateConfirmationDialog" to="." method="_delete_and_update"]
+[connection signal="confirmed" from="EraseConfirmationDialog" to="." method="erase_translations"]

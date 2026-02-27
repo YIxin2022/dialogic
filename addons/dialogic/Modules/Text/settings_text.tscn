@@ -1,0 +1,485 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf3qks3v18xmr"]
+
+[ext_resource type="Script" uid="uid://cdxck874xobqh" path="res://addons/dialogic/Modules/Text/settings_text.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://dpwhshre1n4t6" path="res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="3_s7xhj"]
+
+[node name="DialogText" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "行为举止"
+
+[node name="VBox" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="DefaultSpeedLabel" type="HBoxContainer" parent="VBoxContainer/VBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBox/DefaultSpeedLabel"]
+layout_mode = 2
+text = "默认字符显现速度"
+
+[node name="HintTooltip2" parent="VBoxContainer/VBox/DefaultSpeedLabel" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "每个字符出现的时速（秒）。如果设为 0，文本将立刻全部展现完毕（仍然会考虑标点停顿）。"
+texture = null
+hint_text = "每个字符出现的时速（秒）。如果设为 0，文本将立刻全部展现完毕（仍然会考虑标点停顿）。"
+
+[node name="DefaultSpeed" type="SpinBox" parent="VBoxContainer/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+step = 0.001
+
+[node name="InputActionLabel" type="HBoxContainer" parent="VBoxContainer/VBox"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/VBox/InputActionLabel"]
+layout_mode = 2
+text = "交互输入按键"
+
+[node name="HintTooltip3" parent="VBoxContainer/VBox/InputActionLabel" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "快进略过当前文本并且前往下个事件的输入按键动作。
+您可以在“项目设置 -> 输入映射”中配制具体键位。"
+texture = null
+hint_text = "快进略过当前文本并且前往下个事件的输入按键动作。
+您可以在“项目设置 -> 输入映射”中配制具体键位。"
+
+[node name="InputAction" parent="VBoxContainer/VBox" instance=ExtResource("3")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBox"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/VBox/HBoxContainer"]
+layout_mode = 2
+text = "文字显现过程允许快进"
+
+[node name="HintTooltip4" parent="VBoxContainer/VBox/HBoxContainer" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "如果勾选，可通过按键来跳过正在进行中的文字显现过程。
+如果不勾选，则只能等待文字全部正常出完后才能前往下一个事件。"
+texture = null
+hint_text = "如果勾选，可通过按键来跳过正在进行中的文字显现过程。
+如果不勾选，则只能等待文字全部正常出完后才能前往下一个事件。"
+
+[node name="Skippable" type="HBoxContainer" parent="VBoxContainer/VBox"]
+layout_mode = 2
+
+[node name="Skippable" type="CheckBox" parent="VBoxContainer/VBox/Skippable"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBox/Skippable"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/VBox/Skippable/HBoxContainer2"]
+layout_mode = 2
+text = "快进延迟时间:"
+
+[node name="HintTooltip4" parent="VBoxContainer/VBox/Skippable/HBoxContainer2" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "按下快进跳过前的延迟阻断间隔。
+
+这可以用来防止玩家按得太快导致无意中掠过时间轴中过多的事件。"
+texture = null
+hint_text = "按下快进跳过前的延迟阻断间隔。
+
+这可以用来防止玩家按得太快导致无意中掠过时间轴中过多的事件。"
+
+[node name="SkippableDelay" type="SpinBox" parent="VBoxContainer/VBox/Skippable/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.01
+suffix = "s"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBox/Skippable"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/VBox/Skippable/HBoxContainer3"]
+layout_mode = 2
+text = "前进延迟等待:"
+
+[node name="HintTooltip4" parent="VBoxContainer/VBox/Skippable/HBoxContainer3" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "自然读完自动前进前所需的等待时间（当文字不人为快进而自主播放完毕时）。
+
+通常是为了防止这种悲剧：当玩家正想按下按键快进掠过文本显视的瞬间，正好碰巧文本出完了从而导致直接略到了极快消失的下一条事件。"
+texture = null
+hint_text = "自然读完自动前进前所需的等待时间（当文字不人为快进而自主播放完毕时）。
+
+通常是为了防止这种悲剧：当玩家正想按下按键快进掠过文本显视的瞬间，正好碰巧文本出完了从而导致直接略到了极快消失的下一条事件。"
+
+[node name="AdvanceDelay" type="SpinBox" parent="VBoxContainer/VBox/Skippable/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+step = 0.01
+suffix = "s"
+
+[node name="ColorNames" type="HBoxContainer" parent="VBoxContainer/VBox"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="VBoxContainer/VBox/ColorNames"]
+layout_mode = 2
+text = "自动对名字进行彩色高亮"
+
+[node name="HintTooltip5" parent="VBoxContainer/VBox/ColorNames" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "若开启，对白文本当中遇上对应角色的名字将会被自动填上所属的角色本命色配置。"
+texture = null
+hint_text = "若开启，对白文本当中遇上对应角色的名字将会被自动填上所属的角色本命色配置。"
+
+[node name="AutocolorNames" type="CheckBox" parent="VBoxContainer/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TextPrefixLabel" type="HBoxContainer" parent="VBoxContainer/VBox"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="VBoxContainer/VBox/TextPrefixLabel"]
+layout_mode = 2
+text = "正文前缀预设"
+
+[node name="HintTooltip5" parent="VBoxContainer/VBox/TextPrefixLabel" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "此栏配置会追加在所有文本之前渲染。（比如用全局 BBCode 风格样式等）"
+texture = null
+hint_text = "此栏配置会追加在所有文本之前渲染。（比如用全局 BBCode 风格样式等）"
+
+[node name="TextPrefix" type="LineEdit" parent="VBoxContainer/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BBCodeEffectLabel" type="HBoxContainer" parent="VBoxContainer/VBox"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="VBoxContainer/VBox/BBCodeEffectLabel"]
+layout_mode = 2
+text = "自定义全局 BBCode 效果"
+
+[node name="HintTooltip5" parent="VBoxContainer/VBox/BBCodeEffectLabel" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "请提供一份自定义 BBCode 资源效果的引用列表（路径或者 uuid 的形式），使用半角逗号间隔。"
+texture = null
+hint_text = "请提供一份自定义 BBCode 资源效果的引用列表（路径或者 uuid 的形式），使用半角逗号间隔。"
+
+[node name="CustomBBCodeEffects" type="LineEdit" parent="VBoxContainer/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBox"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="VBoxContainer/VBox/HBoxContainer3"]
+layout_mode = 2
+text = "回车换行视同为新事件"
+
+[node name="HintTooltip7" parent="VBoxContainer/VBox/HBoxContainer3" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "如果开启，您敲下的回车新行就如同自带了 [n] 后置指令一样，
+表面上就像是正儿八经停在那里等玩家输入后再新开一条事件一样。"
+texture = null
+hint_text = "如果开启，您敲下的回车新行就如同自带了 [n] 后置指令一样，
+表面上就像是正儿八经停在那里等玩家输入后再新开一条事件一样。"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/VBox"]
+layout_mode = 2
+
+[node name="NewEvents" type="CheckBox" parent="VBoxContainer/VBox/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NewEventOption" type="OptionButton" parent="VBoxContainer/VBox/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+selected = 0
+fit_to_longest_item = false
+item_count = 2
+popup/item_0/text = "变成独立事件"
+popup/item_0/id = 0
+popup/item_1/text = "追加附带内容"
+popup/item_1/id = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer AutoAdvance" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer AutoAdvance"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "连播自动前进（Auto-Advance）"
+
+[node name="HintTooltip" parent="VBoxContainer/HBoxContainer AutoAdvance" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "自动前进的核心概念是在当面文字显示完毕后在一定时间的延迟下继续全自动运行向后文。
+
+您能够在任意时刻从代码启用自动前进：
+- Dialogic.Inputs.auto_advance.enabled_until_user_input = true
+- Dialogic.Inputs.auto_advance.enabled_until_next_event = true
+- Dialogic.Inputs.auto_advance.enabled_forced = true
+它们是共同叠加作用的，只要有一个是激活状态，连播就会生生不息。
+只要没被禁止，玩家依旧能够在连播时触发常规快进功能。
+
+自动前进功能默认会乖乖等候人物配音 Voice 播干净才会真的翻页。当然这个行为可以通过代码手动关停。"
+texture = null
+hint_text = "自动前进的核心概念是在当面文字显示完毕后在一定时间的延迟下继续全自动运行向后文。
+
+您能够在任意时刻从代码启用自动前进：
+- Dialogic.Inputs.auto_advance.enabled_until_user_input = true
+- Dialogic.Inputs.auto_advance.enabled_until_next_event = true
+- Dialogic.Inputs.auto_advance.enabled_forced = true
+它们是共同叠加作用的，只要有一个是激活状态，连播就会生生不息。
+只要没被禁止，玩家依旧能够在连播时触发常规快进功能。
+
+自动前进功能默认会乖乖等候人物配音 Voice 播干净才会真的翻页。当然这个行为可以通过代码手动关停。"
+
+[node name="AutoadvanceSettings" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="HBox_BaseDelay2" type="HBoxContainer" parent="VBoxContainer/AutoadvanceSettings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/AutoadvanceSettings/HBox_BaseDelay2"]
+layout_mode = 2
+text = "基础额外延迟"
+
+[node name="HintTooltip" parent="VBoxContainer/AutoadvanceSettings/HBox_BaseDelay2" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "进入下一句之前定死需要增加的一段基础延时缓冲（秒）。"
+texture = null
+hint_text = "进入下一句之前定死需要增加的一段基础延时缓冲（秒）。"
+
+[node name="FixedDelay" type="SpinBox" parent="VBoxContainer/AutoadvanceSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+step = 0.01
+value = 1.0
+suffix = "s"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/AutoadvanceSettings"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/AutoadvanceSettings/HBoxContainer"]
+layout_mode = 2
+text = "补充加码时长"
+
+[node name="HintTooltip2" parent="VBoxContainer/AutoadvanceSettings/HBoxContainer" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "根据字数或者是长句字母数量动态补充额外的阅览宽限时长。
+
+备忘：如果通过代码逻辑修改的话，你甚至能让按照字长和单个文字的双模式共同生效累加时间。"
+texture = null
+hint_text = "根据字数或者是长句字母数量动态补充额外的阅览宽限时长。
+
+备忘：如果通过代码逻辑修改的话，你甚至能让按照字长和单个文字的双模式共同生效累加时间。"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/AutoadvanceSettings"]
+layout_mode = 2
+
+[node name="AdditionalDelayMode" type="OptionButton" parent="VBoxContainer/AutoadvanceSettings/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+selected = 0
+fit_to_longest_item = false
+item_count = 3
+popup/item_0/text = "无"
+popup/item_0/id = 0
+popup/item_1/text = "每个词"
+popup/item_1/id = 1
+popup/item_2/text = "每个字符"
+popup/item_2/id = 2
+
+[node name="AdditionalDelay" type="SpinBox" parent="VBoxContainer/AutoadvanceSettings/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+step = 0.001
+
+[node name="AutoadvanceIgnoreCharacters" type="HBoxContainer" parent="VBoxContainer/AutoadvanceSettings/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/AutoadvanceSettings/HBoxContainer2/AutoadvanceIgnoreCharacters"]
+layout_mode = 2
+text = "忽略不计的标点符号"
+
+[node name="HintTooltip3" parent="VBoxContainer/AutoadvanceSettings/HBoxContainer2/AutoadvanceIgnoreCharacters" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "计算上面的自动延时缓冲时把某些空格或标点剔除掉。
+
+如果完全关闭它的话，就会算上最本源剥离掉 BBCode 影响后的粗糙文本长度进行硬套。
+如果开启，符合下面表达式的垃圾符号就不会被算进耗时当中。"
+texture = null
+hint_text = "计算上面的自动延时缓冲时把某些空格或标点剔除掉。
+
+如果完全关闭它的话，就会算上最本源剥离掉 BBCode 影响后的粗糙文本长度进行硬套。
+如果开启，符合下面表达式的垃圾符号就不会被算进耗时当中。"
+
+[node name="IgnoredCharactersEnabled" type="CheckBox" parent="VBoxContainer/AutoadvanceSettings/HBoxContainer2/AutoadvanceIgnoreCharacters"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="IgnoredCharacters" type="LineEdit" parent="VBoxContainer/AutoadvanceSettings/HBoxContainer2/AutoadvanceIgnoreCharacters"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "/\\\\,.( ); ?!-+\"'"
+expand_to_text_length = true
+
+[node name="HBox_BaseDelay" type="HBoxContainer" parent="VBoxContainer/AutoadvanceSettings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/AutoadvanceSettings/HBox_BaseDelay"]
+layout_mode = 2
+text = "默认激活连播行为"
+
+[node name="HintTooltip" parent="VBoxContainer/AutoadvanceSettings/HBox_BaseDelay" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "通常我们大多是在代码中触发，但是如果你勾了这个的话一跑默认就是连播的。
+它是真正的硬全局自动翻页（系统级），除非通过代码指令强制关闭，否则不会停止。"
+texture = null
+hint_text = "通常我们大多是在代码中触发，但是如果你勾了这个的话一跑默认就是连播的。
+它是真正的硬全局自动翻页（系统级），除非通过代码指令强制关闭，否则不会停止。"
+
+[node name="AutoAdvance" type="CheckBox" parent="VBoxContainer/AutoadvanceSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer AutoSkip" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer AutoSkip"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "全局跳过略缩（Auto-Skip）"
+
+[node name="HintTooltip" parent="VBoxContainer/HBoxContainer AutoSkip" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "自动跳过（快进到底）是一股脑将尚未读到的文本飞速刷过去，一直快进到强互动选项出现（例如 选择枝、强制玩家按键、文本填空等）才停下来。
+
+您可以像这般触发全局全自动化飞越略过：
+Dialogic.Inputs.auto_skip.enabled = true
+
+默认情况下只要玩家按了哪怕一下普通推迟的按键它都会打断退出飞越状态回滚常规状态。
+你同样可以使用这行魔法禁用它：
+Dialogic.Inputs.auto_skip.disable_on_user_input = false"
+texture = null
+hint_text = "自动跳过（快进到底）是一股脑将尚未读到的文本飞速刷过去，一直快进到强互动选项出现（例如 选择枝、强制玩家按键、文本填空等）才停下来。
+
+您可以像这般触发全局全自动化飞越略过：
+Dialogic.Inputs.auto_skip.enabled = true
+
+默认情况下只要玩家按了哪怕一下普通推迟的按键它都会打断退出飞越状态回滚常规状态。
+你同样可以使用这行魔法禁用它：
+Dialogic.Inputs.auto_skip.disable_on_user_input = false"
+
+[node name="AutoskipSettings" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="HBox_BaseDelay2" type="HBoxContainer" parent="VBoxContainer/AutoskipSettings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/AutoskipSettings/HBox_BaseDelay2"]
+layout_mode = 2
+text = "每项事件消耗时长限制"
+
+[node name="HintTooltip" parent="VBoxContainer/AutoskipSettings/HBox_BaseDelay2" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "这是快进系统（Auto-Skip）抵达并执行下一个事件前必须间隔的安全时间。
+
+如果你把这个改成了非常短的诸如 0.1s ，那么每个事件就必须得赶在这个短促的时间里完成处理。
+自定义的扩展命令必须遵守该配置的限局，而内置的官方命令组件天然具备抗干扰跳过能力。"
+texture = null
+hint_text = "这是快进系统（Auto-Skip）抵达并执行下一个事件前必须间隔的安全时间。
+
+如果你把这个改成了非常短的诸如 0.1s ，那么每个事件就必须得赶在这个短促的时间里完成处理。
+自定义的扩展命令必须遵守该配置的限局，而内置的官方命令组件天然具备抗干扰跳过能力。"
+
+[node name="AutoskipTimePerEvent" type="SpinBox" parent="VBoxContainer/AutoskipSettings"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+step = 0.01
+value = 0.1
+suffix = "s"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Title2" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"DialogicSettingsSection"
+text = "智能节奏暂停标记识别"
+
+[node name="HintTooltip" parent="VBoxContainer/HBoxContainer" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "配置遇上何种特定的标点字母符号后做强行暂停停顿反馈。
+
+每次设定的组合框里能够容纳多种文字记号以起到类似逗号延长表现的渲染力。"
+texture = null
+hint_text = "配置遇上何种特定的标点字母符号后做强行暂停停顿反馈。
+
+每次设定的组合框里能够容纳多种文字记号以起到类似逗号延长表现的渲染力。"
+
+[node name="Add" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "追加组合配置"
+
+[node name="AutoPauseSets" type="GridContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "开启绝对硬暂停时制"
+
+[node name="HintTooltip7" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("3_s7xhj")]
+layout_mode = 2
+tooltip_text = "如果不勾这个，上面的那些停顿符号触发延迟时长都是要被当前的文字显示速度按系数乘算加减放大的。只有勾上了它才等于是一个绝对真实世界的精准暂停秒数。"
+texture = null
+hint_text = "如果不勾这个，上面的那些停顿符号触发延迟时长都是要被当前的文字显示速度按系数乘算加减放大的。只有勾上了它才等于是一个绝对真实世界的精准暂停秒数。"
+
+[node name="AutoPausesAbsolute" type="CheckBox" parent="VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="value_changed" from="VBoxContainer/VBox/InputAction" to="." method="_on_InputAction_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/VBox/Skippable/HBoxContainer3/AdvanceDelay" to="." method="_on_skippable_delay_value_changed"]
+[connection signal="item_selected" from="VBoxContainer/VBox/HBoxContainer4/NewEventOption" to="." method="_on_new_event_option_item_selected"]
+[connection signal="item_selected" from="VBoxContainer/AutoadvanceSettings/HBoxContainer2/AdditionalDelayMode" to="." method="_on_additional_delay_mode_item_selected"]
+[connection signal="value_changed" from="VBoxContainer/AutoadvanceSettings/HBoxContainer2/AdditionalDelay" to="." method="_on_additional_delay_value_changed"]
+[connection signal="text_changed" from="VBoxContainer/AutoadvanceSettings/HBoxContainer2/AutoadvanceIgnoreCharacters/IgnoredCharacters" to="." method="_on_IgnoredCharacters_text_changed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Add" to="." method="_on_add_autopauses_set_pressed"]

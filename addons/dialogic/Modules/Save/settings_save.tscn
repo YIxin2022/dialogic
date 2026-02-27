@@ -1,0 +1,141 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd340w7blofak"]
+
+[ext_resource type="Script" uid="uid://bxgl1awhvasa1" path="res://addons/dialogic/Modules/Save/settings_save.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://dbpkta2tjsqim" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn" id="2_v2wt8"]
+
+[sub_resource type="Image" id="Image_6yfie"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 94, 94, 127, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 231, 255, 94, 94, 54, 255, 94, 94, 57, 255, 93, 93, 233, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 93, 93, 41, 255, 255, 255, 0, 255, 255, 255, 0, 255, 97, 97, 42, 255, 93, 93, 233, 255, 93, 93, 232, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 44, 255, 255, 255, 0, 255, 97, 97, 42, 255, 97, 97, 42, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 96, 96, 45, 255, 93, 93, 235, 255, 94, 94, 234, 255, 95, 95, 43, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 93, 93, 235, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 233, 255, 95, 95, 59, 255, 96, 96, 61, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 93, 93, 255, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_dbvsu"]
+image = SubResource("Image_6yfie")
+
+[node name="Saving" type="VBoxContainer"]
+offset_right = 1084.0
+offset_bottom = 212.0
+script = ExtResource("2")
+
+[node name="Grid" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Grid"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Grid/HBoxContainer"]
+layout_mode = 2
+text = "自动存档"
+
+[node name="HintTooltip" parent="Grid/HBoxContainer" instance=ExtResource("2_v2wt8")]
+layout_mode = 2
+tooltip_text = "如果启用，Dialogic 将根据自动保存方法将完整状态自动保存到当前槽位。"
+texture = SubResource("ImageTexture_dbvsu")
+hint_text = "如果启用，Dialogic 将根据自动保存方法将完整状态自动保存到当前槽位。"
+
+[node name="Autosave" type="CheckBox" parent="Grid"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AutosaveModeLabel" type="HBoxContainer" parent="Grid"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Grid/AutosaveModeLabel"]
+layout_mode = 2
+text = "自动存档模式"
+
+[node name="AutosaveModeContent" type="HBoxContainer" parent="Grid"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AutosaveMode" type="OptionButton" parent="Grid/AutosaveModeContent"]
+unique_name_in_owner = true
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "时间轴 开始+结束+跳转"
+popup/item_0/id = 0
+popup/item_1/text = "每 X 秒"
+popup/item_1/id = 1
+popup/item_2/text = "每个文本事件"
+popup/item_2/id = 2
+
+[node name="AutosaveDelay" type="SpinBox" parent="Grid/AutosaveModeContent"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1000.0
+suffix = "s"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Grid"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="Grid/HBoxContainer2"]
+layout_mode = 2
+text = "缺省存档槽名"
+
+[node name="HintTooltip3" parent="Grid/HBoxContainer2" instance=ExtResource("2_v2wt8")]
+layout_mode = 2
+tooltip_text = "默认槽位的名称。"
+texture = SubResource("ImageTexture_dbvsu")
+hint_text = "默认槽位的名称。"
+
+[node name="DefaultSaveSlotName" type="LineEdit" parent="Grid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+expand_to_text_length = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Grid"]
+layout_mode = 2
+
+[node name="EncryptionPasswordLabel" type="Label" parent="Grid/HBoxContainer3"]
+layout_mode = 2
+text = "加密密码"
+
+[node name="HintTooltip" parent="Grid/HBoxContainer3" instance=ExtResource("2_v2wt8")]
+layout_mode = 2
+tooltip_text = "用于加密存档文件的密码。留空时，保存的文件将不会被加密。"
+texture = SubResource("ImageTexture_dbvsu")
+hint_text = "用于加密存档文件的密码。留空时，保存的文件将不会被加密。"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EncryptionPassword" type="LineEdit" parent="Grid/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+expand_to_text_length = true
+
+[node name="EncryptionOnExportsSection" type="HBoxContainer" parent="Grid/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="EncryptionPasswordLabel" type="Label" parent="Grid/HBoxContainer4/EncryptionOnExportsSection"]
+layout_mode = 2
+text = "仅在导出时使用"
+
+[node name="HintTooltip" parent="Grid/HBoxContainer4/EncryptionOnExportsSection" instance=ExtResource("2_v2wt8")]
+layout_mode = 2
+tooltip_text = "为了便于调试，Dialogic 将仅对导出项目所作的存档进行加密。
+开启调试模式或在编辑器内部运行产生时的存档将不使用加密。"
+texture = SubResource("ImageTexture_dbvsu")
+hint_text = "为了便于调试，Dialogic 将仅对导出项目所作的存档进行加密。
+开启调试模式或在编辑器内部运行产生时的存档将不使用加密。"
+
+[node name="EncryptionOnExports" type="CheckBox" parent="Grid/HBoxContainer4/EncryptionOnExportsSection"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="toggled" from="Grid/Autosave" to="." method="_on_autosave_toggled"]
+[connection signal="item_selected" from="Grid/AutosaveModeContent/AutosaveMode" to="." method="_on_autosave_mode_item_selected"]
+[connection signal="value_changed" from="Grid/AutosaveModeContent/AutosaveDelay" to="." method="_on_autosave_delay_value_changed"]
+[connection signal="text_changed" from="Grid/DefaultSaveSlotName" to="." method="_on_default_save_slot_name_text_changed"]
+[connection signal="text_changed" from="Grid/HBoxContainer4/EncryptionPassword" to="." method="_on_encryption_password_text_changed"]
+[connection signal="toggled" from="Grid/HBoxContainer4/EncryptionOnExportsSection/EncryptionOnExports" to="." method="_on_encryption_on_exports_toggled"]

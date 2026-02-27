@@ -1,0 +1,11 @@
+Dialogic 变量可以从时间轴 [b]和[/b] 脚本中修改！它们可用于条件判断和对话文本中！; editor://VariablesEditor
+您可以为 Dialogic 创建 [b]自定义模块[/b]，包括事件、子系统、文本效果、UI 布局甚至编辑器！; editor://Settings->General
+如果有些事件您从不需要，可以在编辑器中将其从列表中隐藏！; editor://Settings->Modules
+您知道 Dialogic 支持翻译吗？确实如此！; editor://Settings->Translations
+您可以在文本事件中使用 [b]BBCode 效果[/b]！它们究竟是什么呢？; https://docs.godotengine.org/en/latest/tutorials/ui/bbcode_in_richtextlabel.html
+在文本事件中写 [/i]<Oh hi/Hello you/Well, well>[i] 将随机选择其中一个字符串！
+有许多好用的文本效果，如 [pause=x]、[speed=x] 和 [portrait=x]。试试看吧！;
+您可以将场景用作角色肖像！这给您提供了几乎无限的自由。; https://dialogic-docs.coppolaemilio.com/custom-portraits.html
+您可以将场景用作背景，这样它们就可以是动态的或任何您想要的效果！
+Dialogic 内置了存档与读档系统！非常强大！; editor://Settings->Saving
+您可以添加多个词汇表文件，每个文件包含悬停时显示信息的词条！; editor://GlossaryEditor
