@@ -25,7 +25,7 @@ func _execute() -> void:
 ################################################################################
 
 func _init() -> void:
-	event_name = "注释"
+	event_name = "注释(Comment)"
 	event_description = "Has no effect on gameplay, but can help organize your timeline."
 	event_sorting_index = 10
 	set_default_color('Color9')
