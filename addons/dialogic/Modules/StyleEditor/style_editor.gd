@@ -17,7 +17,7 @@ var premade_style_parts := {}
 ################################################################################
 
 func _get_title() -> String:
-	return "样式"
+	return "Styles"
 
 
 func _get_icon() -> Texture:

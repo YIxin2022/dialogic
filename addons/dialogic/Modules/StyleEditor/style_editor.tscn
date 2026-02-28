@@ -57,7 +57,7 @@ layout_mode = 2
 [node name="StyleListTitle" type="Label" parent="Panel/VBox/Title" unique_id=1425741460]
 layout_mode = 2
 theme_type_variation = &"DialogicSubTitle"
-text = "样式"
+text = "样式 (Styles)"
 
 [node name="HintTooltip" parent="Panel/VBox/Title" unique_id=1197251385 instance=ExtResource("2_g4mnt")]
 layout_mode = 2
@@ -187,7 +187,7 @@ layout_mode = 2
 [node name="LayerListTitle" type="Label" parent="StyleView/PanelContainer/StyleEditor/LayerPanel/VBox/Title" unique_id=1679594011]
 layout_mode = 2
 theme_type_variation = &"DialogicSubTitle"
-text = "图层部件（Layers）"
+text = "图层部件 (Layers)"
 
 [node name="HintTooltip" parent="StyleView/PanelContainer/StyleEditor/LayerPanel/VBox/Title" unique_id=838086490 instance=ExtResource("2_g4mnt")]
 layout_mode = 2
@@ -239,14 +239,14 @@ layout_mode = 2
 tooltip_text = "剥离独立为自定义组件"
 switch_on_hover = true
 item_count = 4
-popup/item_0/text = "MAKE CUSTOM"
+popup/item_0/text = "剥离为自定义模块"
 popup/item_0/id = 3
 popup/item_0/disabled = true
 popup/item_1/id = 0
 popup/item_1/separator = true
-popup/item_2/text = "Current Layer"
+popup/item_2/text = "当前图层"
 popup/item_2/id = 0
-popup/item_3/text = "Full Layout"
+popup/item_3/text = "包含它的所有相关"
 popup/item_3/id = 2
 
 [node name="DeleteLayerButton" type="Button" parent="StyleView/PanelContainer/StyleEditor/LayerPanel/VBox/LayerButtons" unique_id=22217721]
@@ -335,7 +335,7 @@ theme_override_constants/separation = 0
 [node name="Label" type="Label" parent="StyleView/PanelContainer/StyleEditor/LayerSettings/LayerInfoBody/HBox/Info/Description" unique_id=374930628]
 layout_mode = 2
 theme_type_variation = &"DialogicHintText2"
-text = "简介说明: "
+text = "简介 (Info): "
 
 [node name="SmallLayerDescription" type="Label" parent="StyleView/PanelContainer/StyleEditor/LayerSettings/LayerInfoBody/HBox/Info/Description" unique_id=313383482]
 unique_name_in_owner = true

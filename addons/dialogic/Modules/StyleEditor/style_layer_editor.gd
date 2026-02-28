@@ -82,9 +82,10 @@ func setup_layer_tree_item(info:Dictionary, item:TreeItem) -> void:
 	item.custom_minimum_height = _minimum_tree_item_height
 
 	if %StyleBrowser.is_premade_style_part(info.path):
-		if ResourceLoader.exists(%StyleBrowser.premade_scenes_reference[info.path].get("icon", "")):
-			item.set_icon(0, load(%StyleBrowser.premade_scenes_reference[info.path].get("icon")))
-		item.set_text(0, %StyleBrowser.premade_scenes_reference[info.path].get("name", "Layer"))
+		if info.path == "res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn":
+			item.set_text(0, "默认基底样式 (Default Layout Base)")
+		else:
+			item.set_text(0, %StyleBrowser.premade_scenes_reference[info.path].get("name", "Layer"))
 
 	else:
 		item.set_text(0, clean_scene_name(info.path))
@@ -346,12 +347,12 @@ func load_layout_scene_customization(custom_scene_path:String, overrides:Diction
 	if settings.is_empty():
 		var note := Label.new()
 		note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		note.text = "This layer has no exposed settings."
+		note.text = "该图层没有公开任何设置。"
 		if not %StyleBrowser.is_premade_style_part(custom_scene_path):
-			note.text += "\n\nIf you want to add settings, make sure to have a root script in @tool mode and expose some @exported variables to show up here."
+			note.text += "\n\n如果您想要添加自定义设置项，请确保根节点脚本处于 @tool 模式下，并且有暴露（@export）一些变量，这样它们才会显示在这里。"
 		note.theme_type_variation = "DialogicHintText2"
 		%LayerSettingsTabs.add_child(note)
-		note.name = "General"
+		note.name = "常规 (General)"
 		return
 
 	var current_grid: GridContainer = null
@@ -373,6 +374,7 @@ func load_layout_scene_customization(custom_scene_path:String, overrides:Diction
 				main_scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 				var group_name := str(i["name"])
 				var group_trans := {
+					"General": "常规 (General)",
 					"Text": "文本",
 					"Box": "背景框",
 					"Name Label": "名字标签",
@@ -589,7 +591,12 @@ func load_layout_scene_customization(custom_scene_path:String, overrides:Diction
 					"Next Indicator Texture": "后续指示器贴图",
 					"Next Indicator Size": "后续指示器尺寸",
 					"Next Indicator Position Offset": "后续指示器位置偏移",
-					"Autoadvance Progressbar": "显示自动推进进度条"
+					"Autoadvance Progressbar": "显示自动推进进度条",
+					"Canvas Layer": "画布层级(Canvas Layer)",
+					"Follow Viewport": "跟随视口(Follow Viewport)",
+					"Global Bg Color": "全局背景颜色(Global Bg Color)",
+					"Global Font Color": "全局文本颜色(Global Font Color)",
+					"Global Font": "全局字体(Global Font)"
 				}
 				if prop_name in translations:
 					prop_name = translations[prop_name]
@@ -657,7 +664,7 @@ func collect_settings(properties:Array[Dictionary]) -> Array[Dictionary]:
 				continue
 
 			if current_group.is_empty():
-				current_group = {"name":"General", "added":false, "id":&"GROUP"}
+				current_group = {"name":"常规 (General)", "added":false, "id":&"GROUP"}
 
 			if current_group.get("added", true) == false:
 				settings.append(current_group)
