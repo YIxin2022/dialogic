@@ -5,13 +5,13 @@ extends DialogicLayoutLayer
 ## when hovering a glossary entry on a text node.
 
 
-@export_group("文本 (Text)")
+@export_group("文本")
 enum Alignment {LEFT, CENTER, RIGHT}
 @export var title_alignment: Alignment = Alignment.LEFT
 @export var text_alignment: Alignment = Alignment.LEFT
 @export var extra_alignment: Alignment = Alignment.RIGHT
 
-@export_subgroup("颜色 (Colors)")
+@export_subgroup("颜色")
 enum TextColorModes {GLOBAL, ENTRY, CUSTOM}
 @export var title_color_mode: TextColorModes = TextColorModes.ENTRY
 @export var title_custom_color: Color = Color.WHITE
@@ -21,22 +21,25 @@ enum TextColorModes {GLOBAL, ENTRY, CUSTOM}
 @export var extra_custom_color: Color = Color.WHITE
 
 
-@export_group("字体 (Font)")
+@export_group("字体")
 @export var font_use_global: bool = true
 @export_file('*.ttf', '*.tres') var font_custom: String = ""
 
-@export_subgroup("尺寸规格 (Sizes)")
+@export_subgroup("尺寸规格 (Size)")
+## 标题字体尺寸
 @export var font_title_size: int = 18
+## 正文字体尺寸
 @export var font_text_size: int = 17
+## 额外信息字体尺寸
 @export var font_extra_size: int = 15
 
 
-@export_group("背景框 (Box)")
-@export_subgroup("颜色 (Color)")
+@export_group("背景框")
+@export_subgroup("颜色")
 enum ModulateModes {BASE_COLOR_ONLY, ENTRY_COLOR_ON_BOX, GLOBAL_BG_COLOR}
 @export var box_modulate_mode: ModulateModes = ModulateModes.ENTRY_COLOR_ON_BOX
 @export var box_base_modulate: Color = Color.WHITE
-@export_subgroup("尺寸 (Size)")
+@export_subgroup("尺寸")
 @export var box_width: int = 200
 
 const MISSING_INDEX := -1

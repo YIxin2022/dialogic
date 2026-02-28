@@ -4,25 +4,27 @@ extends DialogicLayoutLayer
 ## Example scene for viewing the History
 ## Implements most of the visual options from 1.x History mode
 
-@export_group("外观 (Look)")
-@export_subgroup("字体 (Font)")
+@export_group("外观", "history_")
+@export_subgroup("字体")
+## 是否使用全局字体大小
 @export var font_use_global_size: bool = true
+## 自定义历史记录字体大小
 @export var font_custom_size: int = 15
 @export var font_use_global_fonts: bool = true
 @export_file('*.ttf', '*.tres') var font_custom_normal: String = ""
 @export_file('*.ttf', '*.tres') var font_custom_bold: String = ""
 @export_file('*.ttf', '*.tres') var font_custom_italics: String = ""
 
-@export_subgroup("按钮 (Buttons)")
+@export_subgroup("按钮")
 @export var show_open_button: bool = true
 @export var show_close_button: bool = true
 
-@export_group("设定 (Settings)")
-@export_subgroup("事件 (Events)")
+@export_group("设定")
+@export_subgroup("事件")
 @export var show_all_choices: bool = true
 @export var show_join_and_leave: bool = true
 
-@export_subgroup("行为 (Behaviour)")
+@export_subgroup("行为")
 @export var scroll_to_bottom: bool = true
 @export var show_name_colors: bool = true
 @export var name_delimeter: String = ": "

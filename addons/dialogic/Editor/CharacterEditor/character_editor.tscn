@@ -48,11 +48,11 @@ text = "My Character"
 
 [node name="NameTooltip" parent="Scroll/VBox/TopSection/NameContainer" unique_id=1870345891 instance=ExtResource("2_uhhqs")]
 layout_mode = 2
-tooltip_text = "This unique identifier is based on the file name. You can change it in the Reference Manager.
-Use this name in timelines to reference this character."
+tooltip_text = "该唯一标识符基于所创建的文件名称。你可以在「引用管理器」里统一批量更改名称。
+在时间轴脚本里，你将使用该标识名称来指代此名角色。"
 texture = null
-hint_text = "This unique identifier is based on the file name. You can change it in the Reference Manager.
-Use this name in timelines to reference this character."
+hint_text = "该唯一标识符基于所创建的文件名称。你可以在「引用管理器」里统一批量更改名称。
+在时间轴脚本里，你将使用该标识名称来指代此名角色。"
 
 [node name="MainHSplit" type="HSplitContainer" parent="Scroll/VBox" unique_id=1603115244]
 unique_name_in_owner = true
@@ -152,19 +152,19 @@ text = "肖像"
 [node name="AddPortraitButton" type="Button" parent="Scroll/VBox/MainHSplit/Split/HBoxContainer/MarginContainer/PortraitListSection/Portraits/Title" unique_id=1343539624]
 unique_name_in_owner = true
 layout_mode = 2
-tooltip_text = "Add Empty Portrait"
+tooltip_text = "添加空白肖像"
 theme_type_variation = &"FlatButton"
 
 [node name="AddPortraitGroupButton" type="Button" parent="Scroll/VBox/MainHSplit/Split/HBoxContainer/MarginContainer/PortraitListSection/Portraits/Title" unique_id=554125997]
 unique_name_in_owner = true
 layout_mode = 2
-tooltip_text = "Add Portrait Group"
+tooltip_text = "添加肖像分组"
 theme_type_variation = &"FlatButton"
 
 [node name="ImportPortraitsButton" type="Button" parent="Scroll/VBox/MainHSplit/Split/HBoxContainer/MarginContainer/PortraitListSection/Portraits/Title" unique_id=423626215]
 unique_name_in_owner = true
 layout_mode = 2
-tooltip_text = "Import Images as Portraits"
+tooltip_text = "导入图片作为肖像"
 theme_type_variation = &"FlatButton"
 
 [node name="PortraitListTools" type="HBoxContainer" parent="Scroll/VBox/MainHSplit/Split/HBoxContainer/MarginContainer/PortraitListSection/Portraits" unique_id=1864279451]

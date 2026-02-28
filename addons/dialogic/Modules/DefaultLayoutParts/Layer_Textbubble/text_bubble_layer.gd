@@ -3,8 +3,8 @@ extends DialogicLayoutLayer
 
 ## This layout won't do anything on its own
 
-@export_group("主要设置 (Main)")
-@export_subgroup("文本 (Text)")
+@export_group("主要设置")
+@export_subgroup("文本")
 @export var text_size: int = 15
 @export var text_color: Color = Color.BLACK
 @export_file('*.ttf') var normal_font: String = ""
@@ -13,7 +13,7 @@ extends DialogicLayoutLayer
 @export_file('*.ttf') var bold_italic_font: String = ""
 @export var text_max_width: int = 300
 
-@export_subgroup("背景框 (Box)")
+@export_subgroup("背景框")
 @export var box_modulate: Color = Color.WHITE
 @export var box_modulate_by_character_color: bool = false
 @export var box_padding: Vector2 = Vector2(10,10)
@@ -22,19 +22,19 @@ extends DialogicLayoutLayer
 @export_range(0, 1) var box_wobble_amount: float = 0.5
 @export_range(0, 1) var box_wobble_detail: float = 0.2
 
-@export_subgroup("行为 (Behaviour)")
+@export_subgroup("行为")
 @export var behaviour_distance: int = 50
 @export var behaviour_direction: Vector2 = Vector2(1, -1)
 @export var behaviour_mouse_filter: Control.MouseFilter
 
-@export_group("名字标签 (Name Label)")
-@export_subgroup("名字标签 (Name Label)")
+@export_group("名字标签")
+@export_subgroup("名字标签")
 @export var name_label_enabled: bool = true
 @export var name_label_font_size: int = 15
 @export_file('*.ttf') var name_label_font: String = ""
 @export var name_label_use_character_color: bool = true
 @export var name_label_color: Color = Color.BLACK
-@export_subgroup("名字面板 (Name Label Box)")
+@export_subgroup("名字面板")
 @export var name_label_box_modulate: Color = Color.WHITE
 @export var name_label_box_modulate_use_character_color: bool = false
 @export var name_label_padding: Vector2 = Vector2(5,0)
@@ -42,8 +42,8 @@ extends DialogicLayoutLayer
 @export var name_label_alignment := HBoxContainer.ALIGNMENT_BEGIN
 
 
-@export_group("选项 (Choices)")
-@export_subgroup("选项文字 (Choices Text)")
+@export_group("选项")
+@export_subgroup("选项文字")
 @export var choices_text_size: int = 15
 @export_file('*.ttf') var choices_text_font: String = ""
 @export var choices_text_color: Color = Color.DARK_SLATE_GRAY
@@ -51,12 +51,12 @@ extends DialogicLayoutLayer
 @export var choices_text_color_focus: Color = Color.DARK_MAGENTA
 @export var choices_text_color_disabled: Color = Color.DARK_GRAY
 
-@export_subgroup("选项布局 (Choices Layout)")
+@export_subgroup("选项布局")
 @export var choices_layout_alignment := FlowContainer.ALIGNMENT_END
 @export var choices_layout_force_lines: bool = false
 @export_file('*.tres', "*.res") var choices_base_theme: String = ""
 
-@export_subgroup("行为 (Behavior)")
+@export_subgroup("行为")
 @export var maximum_choices: int = 5
 @export_file('*.tscn') var choices_custom_button: String = ""
 

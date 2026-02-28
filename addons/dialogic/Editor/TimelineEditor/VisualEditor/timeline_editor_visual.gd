@@ -236,10 +236,125 @@ func load_event_buttons() -> void:
 		if event_resource.event_name in hidden_buttons:
 			continue
 
+		var translated_name = event_resource.event_name
+		if translated_name == "Character": translated_name = "角色"
+		elif translated_name == "Choice": translated_name = "选项"
+		elif translated_name == "Condition": translated_name = "条件"
+		elif translated_name == "Clear": translated_name = "清屏"
+		elif translated_name == "End": translated_name = "结束"
+		elif translated_name == "Emit Signal": translated_name = "发送信号"
+		elif translated_name == "Jump": translated_name = "跳转"
+		elif translated_name == "Label": translated_name = "标签"
+		elif translated_name == "Return": translated_name = "返回"
+		elif translated_name == "Save": translated_name = "保存"
+		elif translated_name == "Setting": translated_name = "设置"
+		elif translated_name == "Wait": translated_name = "等待"
+		elif translated_name == "Wait for Input": translated_name = "等待输入"
+		elif translated_name == "Set Variable": translated_name = "设置变量"
+		elif translated_name == "Audio": translated_name = "音频"
+		elif translated_name == "Background": translated_name = "背景"
+		elif translated_name == "Call Node": translated_name = "调用节点"
+		elif translated_name == "Change Style": translated_name = "更改样式"
+		elif translated_name == "Voice": translated_name = "语音"
+		elif translated_name == "Text": translated_name = "文本"
+		elif translated_name == "Text Input": translated_name = "文本输入"
+		elif translated_name == "Type Sound": translated_name = "打字音效"
+		# Keep event_name for fallback
+
+		var translated_desc = event_resource.event_description
+		if translated_desc == "Allows going to another timeline or jumping to a label event in this timeline.":
+			translated_desc = "允许跳转到另一条时间轴，或跳转到本时间轴内的某个标签处。"
+		elif translated_desc == "Returns to the last jump event or ends the timeline (if no jump happened before).":
+			translated_desc = "返回到上一个跳转事件，或结束当前时间轴(如果之前没有发生过跳转)。"
+		elif translated_desc == "Shows dialogue text and allows character joining and leaving.":
+			translated_desc = "显示对话文本，并允许角色加入和离开场景。"
+		elif translated_desc == "Shows a choice buttons and waits for the player to press one.":
+			translated_desc = "显示选项按钮并等待玩家点击选择。"
+		elif translated_desc == "Changes a dialogic variable or property.":
+			translated_desc = "更改或设置 Dialogic 变量属性。"
+		elif translated_desc == "Waits for a specific time or user input.":
+			translated_desc = "等待指定时间或等待用户输入。"
+		elif translated_desc == "Waits for user input to continue the timeline.":
+			translated_desc = "暂停时间轴，等待用户输入操作后再继续。"
+		elif translated_desc == "Shows or hides a background image/scene.":
+			translated_desc = "显示或隐藏背景图片/场景。"
+		elif translated_desc == "Plays a sound or music file.":
+			translated_desc = "播放对应的音效或音乐文件。"
+		elif translated_desc == "Plays a voice line.":
+			translated_desc = "播放角色语音文件。"
+		elif translated_desc == "Emits a signal that can be connected to other scripts.":
+			translated_desc = "发送一个可以被其他脚本节点监听的信号。"
+		elif translated_desc == "Allows calling a method on a node or an autoload.":
+			translated_desc = "调用场景节点或单例(Autoload)资源中的方法。"
+		elif translated_desc == "Allows executing events based on conditions.":
+			translated_desc = "允许根据条件分支来执行不同事件。"
+		elif translated_desc == "Forces the timeline to end.":
+			translated_desc = "强制结束当前的时间轴对话。"
+		elif translated_desc == "Clears characters, backgrounds, or text.":
+			translated_desc = "清除画面上的角色、背景或者文本框内容。"
+		elif translated_desc == "Allows saving the game.":
+			translated_desc = "允许在此处保存游戏存档。"
+		elif translated_desc == "Prompts the user to input text and saves it to a variable.":
+			translated_desc = "弹出输入框让用户输入文本，并将其保存到特定变量中。"
+		elif translated_desc == "Defines a label that can be jumped to.":
+			translated_desc = "定义一个可通过跳转事件到达的文本标签(书签)。"
+		elif translated_desc == "Allows changing layout styles.":
+			translated_desc = "允许在对话中途变更当前的界面布局样式。"
+		elif translated_desc.begins_with("Provides a point to jump to with the jump event"):
+			translated_desc = "提供一个可以通过跳转事件到达的锚点。可用于将时间轴拆分为多个部分。"
+		elif translated_desc.begins_with("Changes a Dialogic variable"):
+			translated_desc = "改变或设置 Dialogic 的变量。"
+		elif translated_desc.begins_with("Suspends the timeline"):
+			translated_desc = "暂停时间轴，等待用户做出输入。"
+		elif translated_desc.begins_with("Triggers a signal"):
+			translated_desc = "触发一个可以被监听到的信号事件。"
+		elif translated_desc.begins_with("Calls a method"):
+			translated_desc = "调用特定节点或单例上挂载的方法。"
+		elif translated_desc.begins_with("Emits a signal"):
+			translated_desc = "发出一个自定义信号。"
+		elif translated_desc.begins_with("Allows calling"):
+			translated_desc = "调用函数脚本。"
+		elif translated_desc.begins_with("Allows playing the contained events"):
+			translated_desc = "当且仅当条件为【True（真）】时，才执行所包含其内的事件链。"
+		elif translated_desc.begins_with("Waits until the next advance input"):
+			translated_desc = "暂停对话进程，挂机等待玩家发生推进操作后继续。"
+		elif translated_desc.begins_with("Displays text."):
+			translated_desc = "显示对话文本。可以由角色说出。\n支持各类 BBCode、文本效果和变量。"
+		elif translated_desc.begins_with("Allows joining or leaving"):
+			translated_desc = "允许角色加入或离开，更新面部肖像、展示位置、镜像反转、层级（Z-Index）或者动作动画。"
+		elif translated_desc.begins_with("Allows setting an audio"):
+			translated_desc = "允许设置一个在下一个文本事件触发时配套播放的音频文件。"
+		else:
+			# Extra map for exact words that might have escaped
+			var extra_trans = {
+				"Provides a point to jump to with the jump event. Can be used to split a timeline into sections.": "提供一个可以通过跳转事件到达的锚点。可用于将时间轴拆分为多个部分。",
+				"Suspends the timeline until the player presses the advance button.": "暂停时间轴直到玩家点击推进按钮。",
+				"Triggers a signal, that you can listen to in your game.": "触发一个可在游戏内监听到的信号事件。",
+				"Calls a method on a node or autoload.": "调用节点或全局单例上的指定方法。",
+				"Allows playing the contained events only if the condition is true.": "当且仅当条件为【真（True）】时，才执行该分支内的事件。",
+				"Waits until the next advance input action.": "一直等待直到出现了下一次的推进输入动作。",
+				"Changes to one of the styles configured in the style editor.": "更改为样式编辑器中配置的某一种样式。",
+				"Clears current state like text, background, portraits, style or audio.": "清除当前呈现的状态，如对话文本、背景图、人物肖像、样式或声音。",
+				"Shows a clickable option. Should be grouped together with other choices. Contains events that are played when chosen. Can have a condition.": "显示一个可点击的选项。应与其他选项放置重叠组合在一起。其下可包含被选中后触发的其他连带事件。可以添加前置条件。",
+				"Waits a given amount of time. Can hide the textbox and be skippable.": "强制等待一段特定时间。可以隐藏文本框或设定为可跳过状态。",
+				"Shows a text input field and stores it to a dialogic variable.": "展示一个弹窗式文本填空输入框，并将输入的内容保存到某个指定的 Dialogic 变量之中。",
+				"Emits the Dialogic.signal_event signal with a given argument. You can react to this signal in your code by connecting to it.": "触发带有特定参数的 Dialogic.signal_event 信号。您可以在代码中连接此信号来进行交互反馈。",
+				"Shows or hides a background image or scene.": "显示或者隐藏背景图片或背景场景。",
+				"Ends the timeline early. Not required at the timeline end.": "提早结束当前的时间轴对话。时间轴末尾不需要特意放置此节点。",
+				"Changes a dialogic variable or a variable from an autoload.": "更改一个 Dialogic 变量或某个单例（Autoload）上的变量值。",
+				"Plays an audio file (sound effect or music) on one of the audio layers (configured in the settings).": "在其中一个音频频段图层（在设置中分配配置）上播放音频文件（音效或者是音乐）。",
+				"Has no effect on gameplay, but can help organize your timeline.": "不对游戏运行产生任何实际影响，仅作为备注帮助您梳理、组织时间轴逻辑。",
+				"Displays text. Can be said by a character.\nCan contain all kinds of bbcode, text effects or variables.": "显示对话文本。可以由角色说出。\n支持各类 BBCode、文本效果和变量。",
+				"Allows joining or leaving a character or updating its portrait, position, mirroring, z-index or animation.": "允许角色加入或离开，更新面部肖像、展示位置、镜像反转、层级（Z-Index）或者动作动画。",
+				"Allows setting an audio file that will be played along the next text event.": "允许设置一个在下一个文本事件触发时配套播放的音频文件。"
+			}
+			if extra_trans.has(translated_desc):
+				translated_desc = extra_trans[translated_desc]
+
 		var button: Button = button_scene.instantiate()
 		button.resource = event_resource
-		button.visible_name = event_resource.event_name
-		button.tooltip_text = event_resource.event_name + "\n" + event_resource.event_description
+		button.visible_name = translated_name
+		button.tooltip_text = translated_name + "\n" + translated_desc
 		button.event_icon = event_resource._get_icon()
 		button.set_color(event_resource.event_color)
 		button.dialogic_color_name = event_resource.dialogic_color_name
@@ -253,7 +368,16 @@ func load_event_buttons() -> void:
 
 			var section_header := HBoxContainer.new()
 			section_header.add_child(Label.new())
-			section_header.get_child(0).text = event_resource.event_category
+			
+			var translated_category = event_resource.event_category
+			if translated_category == "Main": translated_category = "主要 (Main)"
+			elif translated_category == "Flow": translated_category = "流程 (Flow)"
+			elif translated_category == "Visuals": translated_category = "视觉 (Visuals)"
+			elif translated_category == "Audio": translated_category = "音频 (Audio)"
+			elif translated_category == "Logic": translated_category = "逻辑 (Logic)"
+			elif translated_category == "Other": translated_category = "其他 (Other)"
+			
+			section_header.get_child(0).text = translated_category
 			section_header.get_child(0).size_flags_horizontal = SIZE_SHRINK_BEGIN
 			section_header.get_child(0).theme_type_variation = "DialogicSection"
 			section_header.add_child(HSeparator.new())

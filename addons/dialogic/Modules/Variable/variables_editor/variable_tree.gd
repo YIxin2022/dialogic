@@ -119,7 +119,7 @@ func add_folder_item(item_name:String, parent:TreeItem) -> TreeItem:
 	item.set_custom_bg_color(2, folder_color)
 	item.set_meta("color", folder_color)
 
-	item.add_button(2, load(self.get_script().get_path().get_base_dir().get_base_dir() + "/add-variable.svg"), TreeButtons.ADD_VARIABLE, false, "Add Variable")
+	item.add_button(2, load(self.get_script().get_path().get_base_dir().get_base_dir() + "/add-variable.svg"), TreeButtons.ADD_VARIABLE, false, "添加变量(Add Variable)")
 	item.add_button(2, load("res://addons/dialogic/Editor/Images/Pieces/add-folder.svg"), TreeButtons.ADD_FOLDER, false, "Add Group")
 	item.add_button(2, get_theme_icon("Duplicate", "EditorIcons"), TreeButtons.DUPLICATE_FOLDER, item == get_root(), "Duplicate Group")
 	item.add_button(2, get_theme_icon("Remove", "EditorIcons"), TreeButtons.DELETE, item == get_root(), "Delete Group")

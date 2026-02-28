@@ -191,11 +191,11 @@ text = "图层部件（Layers）"
 
 [node name="HintTooltip" parent="StyleView/PanelContainer/StyleEditor/LayerPanel/VBox/Title" unique_id=838086490 instance=ExtResource("2_g4mnt")]
 layout_mode = 2
-tooltip_text = "Each layer is a scene and settings that will be applied to that scene.
-A layer can either be a premade scene or a scene you've made yourself."
+tooltip_text = "每个图层实际上是一个场景分支以及作用于那个场景的设置参数。
+图层既可以是官方预制的场景模板，也可以是你完全自己手敲制作的一个。"
 texture = null
-hint_text = "Each layer is a scene and settings that will be applied to that scene.
-A layer can either be a premade scene or a scene you've made yourself."
+hint_text = "每个图层实际上是一个场景分支以及作用于那个场景的设置参数。
+图层既可以是官方预制的场景模板，也可以是你完全自己手敲制作的一个。"
 
 [node name="LayerButtons" type="HBoxContainer" parent="StyleView/PanelContainer/StyleEditor/LayerPanel/VBox" unique_id=1391203904]
 layout_mode = 2
@@ -228,9 +228,9 @@ popup/item_0/id = 0
 popup/item_0/disabled = true
 popup/item_1/id = 0
 popup/item_1/separator = true
-popup/item_2/text = "Premade Layer"
+popup/item_2/text = "预制图层 (Premade Layer)"
 popup/item_2/id = 0
-popup/item_3/text = "Custom Layer"
+popup/item_3/text = "自定义图层 (Custom Layer)"
 popup/item_3/id = 1
 
 [node name="MakeCustomButton" type="MenuButton" parent="StyleView/PanelContainer/StyleEditor/LayerPanel/VBox/LayerButtons" unique_id=1332622384]
@@ -252,7 +252,7 @@ popup/item_3/id = 2
 [node name="DeleteLayerButton" type="Button" parent="StyleView/PanelContainer/StyleEditor/LayerPanel/VBox/LayerButtons" unique_id=22217721]
 unique_name_in_owner = true
 layout_mode = 2
-tooltip_text = "Delete Layer (no undo!)"
+tooltip_text = "删除此图层 (该操作无法撤销!)"
 disabled = true
 flat = true
 

@@ -4,46 +4,46 @@ extends DialogicLayoutLayer
 enum Alignments {LEFT, CENTER, RIGHT}
 enum LimitedAlignments {LEFT=0, RIGHT=1}
 
-@export_group("文本 (Text)")
-@export_subgroup("文本 (Text)")
+@export_group("文本")
+@export_subgroup("文本")
 @export var text_alignment: Alignments = Alignments.LEFT
-@export_subgroup("尺寸 (Size)")
+@export_subgroup("尺寸")
 @export var text_use_global_size: bool = true
 @export var text_custom_size: int = 15
-@export_subgroup("颜色 (Color)")
+@export_subgroup("颜色")
 @export var text_use_global_color: bool = true
 @export var text_custom_color: Color = Color.WHITE
-@export_subgroup("字体类 (Fonts)")
+@export_subgroup("字体类")
 @export var use_global_fonts: bool = true
 @export_file('*.ttf', '*.tres') var custom_normal_font: String = ""
 @export_file('*.ttf', '*.tres') var custom_bold_font: String = ""
 @export_file('*.ttf', '*.tres') var custom_italic_font: String = ""
 @export_file('*.ttf', '*.tres') var custom_bold_italic_font: String = ""
 
-@export_group("名字标签 (Name Label)")
-@export_subgroup("颜色 (Color)")
+@export_group("名字标签")
+@export_subgroup("颜色")
 enum NameLabelColorModes {GLOBAL_COLOR, CHARACTER_COLOR, CUSTOM_COLOR}
 @export var name_label_color_mode: NameLabelColorModes = NameLabelColorModes.GLOBAL_COLOR
 @export var name_label_custom_color: Color = Color.WHITE
-@export_subgroup("行为 (Behaviour)")
+@export_subgroup("行为")
 @export var name_label_alignment: Alignments = Alignments.LEFT
 @export var name_label_hide_when_no_character: bool = false
-@export_subgroup("字体与尺寸 (Font @export_subgroup("Font & Size") Size)")
+@export_subgroup("字体与尺寸")
 @export var name_label_use_global_size: bool = true
 @export var name_label_custom_size: int = 15
 @export var name_label_use_global_font: bool = true
 @export_file('*.ttf', '*.tres') var name_label_customfont: String = ""
 
-@export_group("背景框 (Box)")
-@export_subgroup("背景框 (Box)")
+@export_group("背景框")
+@export_subgroup("背景框")
 @export_file('*.tres') var box_panel: String = this_folder.path_join("default_stylebox.tres")
 @export var box_modulate_global_color: bool = true
 @export var box_modulate_custom_color: Color = Color(0.47247135639191, 0.31728461384773, 0.16592600941658)
 @export var box_size: Vector2 = Vector2(600, 160)
 @export var box_distance: int = 25
 
-@export_group("肖像画 (Portrait)")
-@export_subgroup('Portrait')
+@export_group("肖像画")
+@export_subgroup('肖像画')
 @export var portrait_stretch_factor: float = 0.3
 @export var portrait_position: LimitedAlignments = LimitedAlignments.LEFT
 @export var portrait_bg_modulate: Color = Color(0, 0, 0, 0.5137255191803)

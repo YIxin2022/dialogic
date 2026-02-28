@@ -25,18 +25,18 @@ enum AnimationsIn {NONE, POP_IN, FADE_UP}
 enum AnimationsOut {NONE, POP_OUT, FADE_DOWN}
 enum AnimationsNewText {NONE, WIGGLE}
 
-@export_group("文本 (Text)")
+@export_group("文本")
 
-@export_subgroup("对齐与尺寸 (Alignment & Size)", "text_")
+@export_subgroup("对齐与尺寸", "text_")
 @export var text_alignment: Alignments= Alignments.LEFT
 @export var text_use_global_size: bool = true
 @export var text_size: int = 15
 
-@export_subgroup("颜色 (Color)")
+@export_subgroup("颜色")
 @export var text_use_global_color: bool = true
 @export var text_custom_color: Color = Color.WHITE
 
-@export_subgroup("字体 (Font)")
+@export_subgroup("字体")
 @export var text_use_global_font: bool = true
 @export_file('*.ttf', '*.tres') var normal_font: String = ""
 @export_file('*.ttf', '*.tres') var bold_font: String = ""
@@ -44,20 +44,21 @@ enum AnimationsNewText {NONE, WIGGLE}
 @export_file('*.ttf', '*.tres') var bold_italics_font: String = ""
 
 
-@export_group("背景框 (Box)")
+@export_group("背景框")
 
-@export_subgroup("面板 (Panel)")
+@export_subgroup("面板")
 @export_file("*.tres") var box_panel: String = this_folder.path_join("vn_textbox_default_panel.tres")
 
-@export_subgroup("颜色 (Color)")
+@export_subgroup("背景框(Box)")
+## 盒子背景是否使用全局颜色
 @export var box_color_use_global: bool = true
+## 自定义盒子背景颜色（当不使用全局颜色时生效）
 @export var box_color_custom: Color = Color.BLACK
-
-@export_subgroup("尺寸与位置 (Size & Position)")
+@export_subgroup("尺寸与位置")
 @export var box_size: Vector2 = Vector2(550, 110)
 @export var box_margin_bottom: int = 15
 
-@export_subgroup("动效 (Animation)")
+@export_subgroup("动效")
 @export var box_animation_in: AnimationsIn = AnimationsIn.FADE_UP
 @export var box_animation_out: AnimationsOut = AnimationsOut.FADE_DOWN
 @export var box_animation_new_text: AnimationsNewText = AnimationsNewText.NONE
@@ -66,14 +67,21 @@ enum AnimationsNewText {NONE, WIGGLE}
 @export_group("名字标签 (Name Label)")
 
 @export_subgroup("颜色 (Color)")
+## 名字使用全局颜色
 @export var name_label_use_global_color: bool= true
+## 名字使用角色专署颜色
 @export var name_label_use_character_color: bool = true
+## 名字自定义颜色
 @export var name_label_custom_color: Color = Color.WHITE
 
 @export_subgroup("字体 (Font)")
+## 名字使用全局字体
 @export var name_label_use_global_font: bool = true
+## 名字专署字体文件
 @export_file('*.ttf', '*.tres') var name_label_font: String = ""
+## 名字使用全局字号
 @export var name_label_use_global_font_size: bool = true
+## 名字自定义字号
 @export var name_label_custom_font_size: int = 15
 
 @export_subgroup("背景框 (Box)")

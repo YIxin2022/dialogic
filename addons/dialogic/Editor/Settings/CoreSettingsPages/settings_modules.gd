@@ -150,7 +150,14 @@ func load_modules_tree() -> void:
 			"Theme": "主题 (Theme)",
 			"Layout": "布局 (Layout)",
 			"Screen": "屏幕 (Screen)",
-			"Condition": "条件 (Condition)"
+			"Condition": "条件 (Condition)",
+			"End": "结束 (End)",
+			"Call": "调用 (Call)",
+			"Voice": "语音 (Voice)",
+			"WaitInput": "等待输入 (WaitInput)",
+			"Glossary": "词汇表 (Glossary)",
+			"Signal": "信号 (Signal)",
+			"Clear": "清屏 (Clear)"
 		}
 		if module_name in mod_trans:
 			module_name = mod_trans[module_name]

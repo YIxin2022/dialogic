@@ -4,7 +4,7 @@ extends DialogicCharacterEditorMainSection
 ## Character editor tab that allows setting a custom style fot the character.
 
 func _init() -> void:
-	hint_text = 'If a character style is set, dialogic will switch to this style, whenever the character speaks. \nFor this it\'s best to use a variation of the same layout to avoid instancing a lot.'
+	hint_text = '如果分配了此角色专用样式，Dialogic 会在角色发言时自动切换使用该样式。\n为了不因为频繁切换降低性能，这里最好使用原样式的变体而非全新的场景布局。'
 
 func _get_title() -> String:
 	return "样式"

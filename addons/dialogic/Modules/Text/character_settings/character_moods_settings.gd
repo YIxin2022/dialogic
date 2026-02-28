@@ -9,7 +9,7 @@ var default_mood := ''
 
 
 func _init() -> void:
-	hint_text = 'Typing sound moods allow you to vary the "typing" sounds of your character. \nThey can be changed based on the portrait or with the [mood=something] text effect.'
+	hint_text = '打字音效情绪使您可以为角色变换不同风格的“打字机”发音。\n它们可以根据所在立绘自动切换，也可以用 [mood=某情绪] 文本指令切换。'
 
 
 func _get_title() -> String:
