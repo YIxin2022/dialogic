@@ -9,7 +9,7 @@ func _ready() -> void:
 	clear()
 	add_icon_item(get_theme_icon("Duplicate", "EditorIcons"), "复制(Duplicate)", 0)
 	add_separator()
-	add_icon_item(get_theme_icon("PlayStart", "EditorIcons"), "重新从这里游玩(Play from here)", 1)
+	add_icon_item(get_theme_icon("PlayStart", "EditorIcons"), "重新从这里开始玩(Play from here)", 1)
 	add_separator()
 	add_icon_item(get_theme_icon("Help", "EditorIcons"), "查阅事件文档(Documentation)", 2)
 	add_icon_item(get_theme_icon("CodeHighlighter", "EditorIcons"), "打开源代码(Open Code)", 3)
