@@ -14,7 +14,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Style"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Style:"
+text = "样式(Style):"
 
 [node name="StyleName" parent="Style" instance=ExtResource("2_a46q0")]
 unique_name_in_owner = true

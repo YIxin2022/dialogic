@@ -16,13 +16,13 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Prefix"]
 layout_mode = 2
-text = "Prefix"
+text = "前缀(Prefix)"
 
 [node name="HintTooltip" parent="Prefix" instance=ExtResource("1_o3alv")]
 layout_mode = 2
 texture = null
-hint_text = "If a character speaks, this appears before their text.
-Example: Color Tags or Quotation Marks."
+hint_text = "角色说话时出现在文本前。
+例如：颜色标签或引号。"
 
 [node name="PrefixInput" type="LineEdit" parent="."]
 layout_mode = 2
@@ -34,13 +34,13 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Suffix"]
 layout_mode = 2
-text = "Suffix"
+text = "后缀(Suffix)"
 
 [node name="HintTooltip" parent="Suffix" instance=ExtResource("1_o3alv")]
 layout_mode = 2
 texture = null
-hint_text = "If a character speaks, this appears after their text.
-Example: Color Tags or Quotation Marks."
+hint_text = "角色说话时出现在文本后。
+例如：颜色标签或引号。"
 
 [node name="SuffixInput" type="LineEdit" parent="."]
 layout_mode = 2

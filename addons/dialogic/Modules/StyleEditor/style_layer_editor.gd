@@ -576,7 +576,20 @@ func load_layout_scene_customization(custom_scene_path:String, overrides:Diction
 					"Name Label Alignment": "名字标签对齐方式",
 					"Name Label Box Offset": "名字标签背景框位置偏移",
 					"Name Label Use Global Font Size": "名字标签使用全局字号",
-					"Name Label Custom Font Size": "名字标签自定义字号"
+					"Name Label Custom Font Size": "名字标签自定义字号",
+					"Name Label Use Global Color": "名字标签使用全局颜色",
+					"Name Label Use Character Color": "名字标签使用角色专属颜色",
+					"Name Label Custom Color": "名字标签自定义颜色",
+					"Name Label Use Global Font": "名字标签使用全局字体",
+					"Name Label Font": "名字标签专属字体文件",
+					"Next Indicator Enabled": "启用后续指示器",
+					"Next Indicator Show On Questions": "在有选项时显示后续指示器",
+					"Next Indicator Show On Autoadvance": "在自动推进时显示后续指示器",
+					"Next Indicator Animation": "后续指示器动画",
+					"Next Indicator Texture": "后续指示器贴图",
+					"Next Indicator Size": "后续指示器尺寸",
+					"Next Indicator Position Offset": "后续指示器位置偏移",
+					"Autoadvance Progressbar": "显示自动推进进度条"
 				}
 				if prop_name in translations:
 					prop_name = translations[prop_name]

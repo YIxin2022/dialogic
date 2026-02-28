@@ -69,7 +69,7 @@ layout_mode = 2
 [node name="Play" type="Button" parent="VBox/ListPanel/Vbox/HBoxContainer" unique_id=361440151]
 unique_name_in_owner = true
 layout_mode = 2
-tooltip_text = "Preview"
+tooltip_text = "预览"
 
 [node name="MoodList" type="ItemList" parent="VBox/ListPanel/Vbox" unique_id=696500971]
 unique_name_in_owner = true

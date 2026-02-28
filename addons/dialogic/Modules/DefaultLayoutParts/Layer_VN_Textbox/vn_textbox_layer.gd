@@ -64,9 +64,9 @@ enum AnimationsNewText {NONE, WIGGLE}
 @export var box_animation_new_text: AnimationsNewText = AnimationsNewText.NONE
 
 
-@export_group("名字标签 (Name Label)")
+@export_group("名字标签")
 
-@export_subgroup("颜色 (Color)")
+@export_subgroup("颜色")
 ## 名字使用全局颜色
 @export var name_label_use_global_color: bool= true
 ## 名字使用角色专署颜色
@@ -74,7 +74,7 @@ enum AnimationsNewText {NONE, WIGGLE}
 ## 名字自定义颜色
 @export var name_label_custom_color: Color = Color.WHITE
 
-@export_subgroup("字体 (Font)")
+@export_subgroup("字体")
 ## 名字使用全局字体
 @export var name_label_use_global_font: bool = true
 ## 名字专署字体文件
@@ -84,19 +84,19 @@ enum AnimationsNewText {NONE, WIGGLE}
 ## 名字自定义字号
 @export var name_label_custom_font_size: int = 15
 
-@export_subgroup("背景框 (Box)")
+@export_subgroup("背景框")
 @export_file("*.tres") var name_label_box_panel: String = this_folder.path_join("vn_textbox_name_label_panel.tres")
 @export var name_label_box_use_global_color: bool = true
 @export var name_label_box_modulate: Color = box_color_custom
 
-@export_subgroup("相对对齐 (Alignment)")
+@export_subgroup("相对对齐")
 @export var name_label_alignment: Alignments = Alignments.LEFT
 @export var name_label_box_offset: Vector2 = Vector2.ZERO
 
 
-@export_group("进程指示器 (Indicators)")
+@export_group("进程指示器")
 
-@export_subgroup("后续指示器 (Next Indicator)")
+@export_subgroup("后续指示器")
 @export var next_indicator_enabled: bool = true
 @export var next_indicator_show_on_questions: bool = true
 @export var next_indicator_show_on_autoadvance: bool = false
@@ -105,13 +105,13 @@ enum AnimationsNewText {NONE, WIGGLE}
 @export var next_indicator_size: Vector2 = Vector2(25,25)
 @export var next_indicator_position_offset: Vector2 = Vector2(-25,-25)
 
-@export_subgroup("自动推进 (Autoadvance)")
+@export_subgroup("自动推进")
 @export var autoadvance_progressbar: bool = true
 
 
-@export_group("音效 (Sounds)")
+@export_group("音效")
 
-@export_subgroup("打字音效 (Typing Sounds)")
+@export_subgroup("打字音效")
 @export var typing_sounds_enabled: bool = true
 @export var typing_sounds_mode: DialogicNode_TypeSounds.Modes = DialogicNode_TypeSounds.Modes.INTERRUPT
 @export_dir var typing_sounds_sounds_folder: String = "res://addons/dialogic/Example Assets/sound-effects/"
